@@ -102,11 +102,24 @@
             <div class="card card-3">
                 <div>
                     <h1 class="heading2">Anagram</h1>
-                    <p class="description1">Convert both strings to lower letters,split,sort,join then compare with strict Equals to</p>
+                    <p class="description1">Convert to lower letters,split,sort,join then compare with strict Equals to</p>
                     <input type="text" id="str1" class="input" placeholder="Enter String1">
                     <input type="text" id="str2" class="input" placeholder="Enter String2">
                     <button class="button button1" onclick="anagram()">Anagram</button>
                     <p id="anagram" class="output"></p>
+                </div>
+            </div>
+
+            <div class="card card-4">
+                <div>
+                    <h1 class="heading2">Longest Word</h1>
+                    <p class="description1">for (let word of words) {
+                        if (word.length > longest.length) {
+                            longest = word;
+                        } }</p>
+                    <input type="text" id="sentence" class="input" placeholder="Enter Sentence">
+                    <button class="button button1" onclick="longestWord()">Longest</button>
+                    <p id="longestWord" class="output"></p>
                 </div>
             </div>
         </div>     

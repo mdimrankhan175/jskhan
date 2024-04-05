@@ -26,6 +26,21 @@ function reverseString(){
        let result=isAnagram(str1,str2)
        document.getElementById('anagram').textContent=result ? 'It is Anagram':'No it is Not Anagram'
    }
+
+   let longestWord1=document.getElementById('longestWord')
+   
+   function longestWord(){
+    let sentence=document.getElementById('sentence').value;
+    let longest='';
+    const words=sentence.split(' ');
+
+        for (let word of words){
+            if(word.length>longest.length){
+                longest=word;
+            }            
+        }
+        return longestWord1.textContent=longest
+    }
    
    function factorial(){
        let inputNumber=document.getElementById('inputNumber').value;
