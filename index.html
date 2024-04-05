@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS KHAN </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand mr-4" href="#">My Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#strings">Strings</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#numbers">Numbers</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#arrays">Arrays</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#storage">Storage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#scheduler">Scheduler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#el">EL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#http">Http Methods</a>
+                </li>
+            </ul>
+        </div>
+</nav>
+
+<div class="jskhan-container">
+
+
+
+<!-- JAVA SCRIPT -->
+
+<section id="#" class="home-container mt-5">
+    <div>
+        <h1>Hai Welcome!</h1>
+        <p>Here i covered the javascript topics</p>
+        <div class="feature">
+            <h2>Topics Covered</h2>
+            <ul>
+                <li>String Operations</li>
+                <li>Number Operations</li>
+                <li>Arrays</li>
+                <li>Storage</li>
+                <li>Event Listeners</li>
+                <li>HTTP Methods</li>
+                <!-- Add more topics as needed -->
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="strings" class="string-container mt-5"> 
+    <div class="mt-5">
+        <h1 class="heading1">String Operations</h1>
+        <div class="cards">
+            <div class="card card-1">
+                <div>
+                    <h1 class="heading2">Reverse String</h1>
+                    <p class="description1">let reverse=input.split('').reverse().join('');</p>
+                    <input type="text" id="inputString" class="input" placeholder="Enter Text">
+                    <button class="button button1" onclick="reverseString()">Reverse</button>
+                    <p id="reversedString" class="output"></p>
+                </div>
+            </div>
+            <div class="card card-2">
+                <div>
+                    <h1 class="heading2">Palindrome</h1>
+                    <p class="description1">(string===reversedString) ? 'It is Palindrome' : 'It is Not a Palindrome'</p>
+                    <input type="text" id="inputString1" class="input" placeholder="Enter Text">
+                    <button class="button button1" onclick="isPalindrome()">Palindrome</button>
+                    <p id="isPalindrome" class="output"></p>
+                </div>
+            </div>
+            
+            <div class="card card-3">
+                <div>
+                    <h1 class="heading2">Anagram</h1>
+                    <p class="description1">Convert both strings to lower letters,split,sort,join then compare with strict Equals to</p>
+                    <input type="text" id="str1" class="input" placeholder="Enter String1">
+                    <input type="text" id="str2" class="input" placeholder="Enter String2">
+                    <button class="button button1" onclick="anagram()">Anagram</button>
+                    <p id="anagram" class="output"></p>
+                </div>
+            </div>
+        </div>     
+    </div>    
+</section>
+<section>
+    <div id="numbers" class="number-container ">
+        <h1 class="heading1 mt-5">Number Operations</h1>
+        <div class="cards">
+            <div class="card card-1">
+                <div>
+                    <h1 class="heading2">Factorial</h1>
+                    <p class="description1">function factorial(n){<br> 
+                        if (n===0 || n===1){
+                            return 1
+                        }<br>
+                        return n*factorial(n-1)
+                    }</p>
+                    <input type="text" id="inputNumber" class="input" placeholder="Enter Number">
+                    <button class="button button1" onclick="factorial()">Factorial</button>
+                    <p id="factorial" class="output"></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+            <div class="number-operations mt-5">
+                <h2 class="heading">Number Operations</h2>
+                <input type="text" id="inputNumber" placeholder="Enter Number">
+                <div class="result">
+                    <button class="button" onclick="factorial()">Factorial</button>
+                    <p id="factorial"></p>
+                </div>
+            </div>
+
+            <div class="array-container">
+                <h2 class="heading">Array Methods</h2>
+                <div class="box-container">
+                    <button id="generateBtn" class="button">Generate Array</button>
+                    <p id="arrayOutput"></p>
+                </div>
+                
+                <div class="box-container">
+                    <div>
+                        <button id="minBtn" class="button">Min</button>
+                        <button id="maxBtn" class="button">Max</button>        
+                        <button id="sumBtn" class="button">Sum</button>
+                    </div>
+                    <p id="statsOutput" class="output"></p>                    
+                </div>
+
+                <div class="box-container">
+                    <button id="sortBtn" class="button">Sort</button>
+                    <p id="sortOutput" class="output"></p>
+                </div>
+
+                <div class="box-container">
+                    <button id="mapBtn" class="button">Map</button>
+                    <p id="mapOutput" class="output"></p>
+                </div>
+                
+                <div class="box-container">
+                    <button id="filterBtn" class="button">Filter</button>
+                    <p id="filterOutput" class="output"></p>
+                </div>
+                
+                <div class="box-container">
+                    <button id="reduceBtn" class="button">Reduce</button>
+                    <p id="reduceOutput" class="output"></p>
+                </div>
+            </div>
+
+            <div class="math-container">
+                <div class="box-container">
+                    <button id="randomnumBtn" class="button" >Random Number</button>
+                    <p id="randomnumOutput" class="output"></p>
+                </div>
+            </div>
+
+
+<!-- LOCAL STORAGE  -->
+
+<div class="storage-container">
+    <h1 class="heading">Client-Side Data Storage</h1>
+    <p class="description">Client-Side Data Storage is storing the data on the client (user's machine).
+Ex: Local Storage, Session Storage, Cookies,  IndexedDB and many more.</p>
+<h2 class="heading">Local Storage</h2>
+<p class="description">It allows web applications to store data locally within the user's browser.
+    It is a Storage Object. Data can be stored in the form of key-value pairs. Some of the Methods are: <br>
+    <span style="color: green; font-weight: 600;">localStorage.setItem("Key", "Value");</span><br>
+    <span style="color: green; font-weight: 600;">localStorage.getItem("Key");</span>
+    <span style="color: green; font-weight: 600;">localStorage.removeItem("Key");</span>
+   
+</p>
+<h2 class="heading">Enter the details to store the data locally:</h2>
+<div class="local-storage-container">
+    <label for="username">Name:</label><input type="text" id="username">
+    <label for="age">Age:</label><input type="text" id="age">
+    <button class="button" onclick="setData()">Set Data</button><br>
+    <button class="button" onclick="getData()">Get Data</button><br>
+    <button class="button" onclick="removeData()">Remove Data</button><br>
+    <p id="storagedisplay"></p>
+    
+
+</div>
+
+</div>
+
+
+
+            <!-- SCHEDULERS  -->
+            <div class="scheduler-container">
+                <h1 class="heading">Scheduler</h1>
+                <p class="description">The Schedulers are used to schedule the execution of a callback function.
+                    Ex: setInterval( ), clearInterval( ), setTimeout( ), clearTimeout(), etc.
+                </p>
+                <div class="p-3">
+                    <p class="">The <span style="font-weight: 800;">setInterval( )</span> method allows us to run a function at the specified interval of time repeatedly.
+                        Syntax: setInterval(function, delay); 
+                        The <span style="font-weight: 800;">clearInterval( )</span> method cancels a schedule previously set up by calling setInterval().
+                        To execute clearInterval() method, we need to pass the uniqueId returned by setInterval() as an argument.
+                       Syntax: clearInterval(uniqueId);
+                    </p>
+                    <button id="intervalBtn" class="button" >set Interval</button>
+                    <button id="clearIntervalBtn" class="button" >clear Interval</button>
+                    <p id="intervalOutput" class="output"></p>
+                </div>
+                <div class="p-3">
+                    <p class="">The <span style="font-weight: 800;">setTimeout( )</span> method executes a function after the specified time.
+
+                        Syntax: setTimeout(function, delay);
+                        We can cancel the  before it executes the callback function using the <span style="font-weight: 800;">clearTimeout()</span>method.
+                        To execute clearTimeout(), we need to pass the uniqueId returned by setTimeout() as an argument.
+                        Syntax: clearTimeout(uniqueId);
+                    </p>
+                    <button id="timeoutBtn" class="button" >set Timeout</button>
+                    <button id="clearTimeoutBtn" class="button" >clear Timeout</button>
+                    <p id="timeoutOutput" class="output"></p>
+                </div>
+                
+            </div>
+
+            <div class="event-listener-container">
+                <h1 class="heading">Event Listeners:</h1>
+                <p class="description">We can add an Event Listener to a DOM Object in three ways they are inline, on, add Event Listeners.</p>
+                <table class="table-container">
+                    <th>Event Listener</th>
+                    <th>Html CODE</th>
+                    <th>Javascript CODE</th>
+                    <th>E.L. Buttons</th>
+                    <th>Output</th>
+                    <tr>
+                        <td>Inline E.L.</td>
+                        <td>onclick="greeting()"</td>
+                        <td>function greeting ( ) { console.log('hai') }</td>
+                        <td><button  onclick="greeting()" class="button1">Inline E.L</button></td>
+                        <td><p id='iel'></p></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>On E.L.</td>
+                        <td>id="greetBtn"</td>
+                        <td>greetBtnEl.onClick = function ( ) { console.log('hai') }; </td>
+                        <td><button id='oelBtn' class="button1">On E.L</button></td>
+                        <td><p id='oel'></p></td>
+                    </tr>
+
+                    <tr>
+                        <td>add E.L.</td>
+                        <td>id="greetBtn"</td>
+                        <td>greetBtnEl.addEventListener ('click',  function ( ) { console.log('hai') })</td>
+                        <td><button id='aelBtn' class="button1">Add E.L</button></td>
+                        <td><p id='ael'></p></td>
+                    </tr>
+
+                </table>
+                
+            </div>
+
+<!-- HTTP METHODS PRACTICE -->
+<!--POST METHOD-->
+<div class="http-method-container">
+    <h1 class="heading">HTTP Methods POST, GET, PUT, DELETE</h1>
+    <div class="http-method-container1">
+        <h1 class="heading">POST Method</h1>
+        <p class="description">Request URL</p>
+        <div class="form-container1">
+            <form id="userForm1" class="w-100">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender: </label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female </option>
+                    </select>                    
+                </div>    
+                <div class="form-group">
+                    <label for="status">Status: </label>
+                    <select id="status" name="status" required>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive </option>
+                    </select>                    
+                </div>  
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div>
+            <p>Request Status: <span id="request"></span></p>
+            <p>Response Body: <span id="response"></span></p>
+            <p>User Id: <span id="userid"></span></p>
+                     
+        </div>
+    </div>
+
+<!--GET METHOD-->
+    <div class="http-method-container1">
+        <h1 class="heading">Get Method</h1>
+        <p class="description">Request URL </p>
+        <button class="button1" id="getbtn">GET</button>
+        <p>Request Status: <span id="getrequest"></span></p>
+        <div style="height: 30%; width: 100%;">
+            <p>Response Body: <span id="getresponse"></span></p>
+        </div>
+    </div>
+
+<!--PUT METHOD-->
+<div class="http-method-container1">
+    <h1 class="heading">PUT Method</h1>
+    <p class="description">Request URL </p>
+    <label for="putinput">User Id:</label>
+    <input type="text" id="putinput">
+    <label for="putrequestbody">Update Data:</label>
+    <textarea row="5" id="putrequestbody" placeholder='{ "name" : "john" }'></textarea>
+    <button class="button1" id="putbtn">PUT</button>
+    <p>Request Status: <span id="putstatus"></span></p>
+    <p>Response Body: <span id="putresponse"></span></p>
+</div>
+
+
+<!--DELETE METHOD-->
+
+<div class="http-method-container1">
+    <h1 class="heading">DELETE Method</h1>
+    <p class="description">Request URL </p>
+    <label for="deleteinput">User Id:</label>
+    <input type="text" id="deleteinput">
+    <button class="button1" id="deletebtn">DELETE</button>
+    <p>Request Status: <span id="deletestatus"></span></p>
+    <p>Response Body: <span id="deleteresponse"></span></p>
+</div>
+
+
+</div>
+
+            
+<div class="fetch-container mb-5">
+     <h1 class="heading">Fetch Operations</h1>
+     <p class=" description " id="jokeText">Click the Joke button to see Day of The Joke here</p>
+     <button class="button" id="jokeBtn">Joke</button>
+ </div>
+
+
+
+<h1>Fetch Data with POST Method Example</h1>
+<div class="p-3 bg-container">
+    <h1 class="heading mb-4">Post method practice</h1>
+    <p class="request-url-text">REQUEST URL: <span class="request-url">https://gorest.co.in/public-api/users</span></p>
+    <!-- Create a form to collect user details -->
+    <form id="userForm" class="w-100">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+        </div>
+        <button type="submit" class="mt-3 p-2 button">Submit</button>
+    </form>
+    <hr />
+    <!-- Section to display the request status -->
+    <div class="p-2 mt-4">
+        <p>Request Status</p>
+        <p class="request-status" id="requestStatus"></p>
+        <!-- Loading indicator (initially hidden) -->
+        <p class="d-none" id="loading">Loading....</p>
+    </div>
+    <hr />
+    <!-- Section to display the response body -->
+    <div class="p-2 mt-4">
+        <p>Response Body</p>
+        <p class="http-response" id="httpResponse"></p>
+    </div>
+</div>
+
+
+
+
+<footer>
+    <p>&copy; This Website Developed by Imran Khan. All rights reserved.</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

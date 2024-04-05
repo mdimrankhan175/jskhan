@@ -1,0 +1,273 @@
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#javascript{
+    
+}
+
+.input{
+    width: 200px;
+}
+
+
+.heading{
+    font-family: sans-serif;
+    color: darkblue;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.heading1{
+    font-family: Helvetica;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.heading2{
+    font-family: Helvetica;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.description{
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkmagenta;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.description1{
+    font-family: verdana;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.description2{
+    font-family: lucida;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.box-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+    padding:20px;
+    
+}
+
+.home-container{
+    height: 100vh;
+    background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+    color: white;
+}
+
+
+.string-container{
+    background-image: url("https://res.cloudinary.com/dbelvmspz/image/upload/v1677982853/bg8_ngo75o.jpg");
+    background-size: cover;
+    border: darkturquoise solid;
+    border-radius: 5px;
+    padding: 20px;
+    
+    
+}
+
+.number-container{
+    background-image: url("https://res.cloudinary.com/dbelvmspz/image/upload/v1677981107/istockphoto-1169276040-612x612_ekbabj.jpg");
+    background-size: cover;    
+    border: blue solid;
+    border-radius: 5px;
+    padding: 20px;
+    height: 100vh;
+
+}
+
+.array-container{
+    border: #4CAF50 solid;
+    border-radius: 5px;
+    margin:10px;
+}
+
+#arrayOutput{
+    font-size: 30px;
+    font-family: sans-serif;
+    color: blueviolet
+}
+
+.output{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+.result{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5px;
+    color:white;
+}
+
+.math-container{
+    background-image: url("https://res.cloudinary.com/dbelvmspz/image/upload/v1677981107/istockphoto-1169276040-612x612_ekbabj.jpg");
+    border: blue solid;
+    border-radius: 5px;
+    margin:10px;
+}
+
+
+.storage-container{
+    border: blueviolet solid;
+    border-radius: 5px;
+    margin:10px;
+    height: 90vh;
+}
+
+.scheduler-container{
+    border: pink solid;
+    border-radius: 5px;
+    margin:10px;
+}
+
+
+
+.event-listener-container{
+    border: brown solid;
+    border-radius: 5px;
+    margin:10px;
+}
+
+.http-method-container{
+    border: darkorchid solid;
+    border-radius: 5px;
+    margin:10px;
+}
+
+.fetch-container{
+    border: forestgreen solid;
+    border-radius: 5px;
+    margin:10px;
+    padding:10px;
+}
+
+.table-container{
+    border: darkcyan solid;
+    border-radius: 5px;
+    margin:20px;
+    width: 90%;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+
+
+.card-1 {
+    background: radial-gradient(#1fe4f5, #3fbafe);
+
+  }
+  
+ .card-2 {
+    background: radial-gradient(#fbc1cc, #fa99b2);
+  }
+  
+ .card-3 {
+    background: radial-gradient(#76b2fe, #b69efe);
+  }
+  
+ .card-4 {
+    background: radial-gradient(#60efbc, #58d5c9);
+  }
+  
+ .card-5 {
+    background: radial-gradient(#f588d8, #c0a3e5);
+  }
+
+
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    transition: background-color 0.3s ease;
+    
+}
+
+.button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Additional styles for different button variations */
+.button.button1 {
+    background-color: #008CBA; /* Blue background for secondary button */
+}
+
+.button.button1:hover {
+    background-color: #086343; /* Darker blue on hover */
+}
+
+.button.button2 {
+    background-color: #b6359e; /* Blue background for secondary button */
+}
+
+.button.button2:hover {
+    background-color: #abd752; /* Darker blue on hover */
+}
+
+
