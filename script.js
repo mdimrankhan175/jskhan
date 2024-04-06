@@ -41,21 +41,81 @@ function reverseString(){
         }
         return longestWord1.textContent=longest
     }
-   
-   function factorial(){
-       let inputNumber=document.getElementById('inputNumber').value;
-       let inputNum=parseInt(inputNumber)
+
+// NUMBER OPERATIONS
+ 
+function factorial(){
+    let inputNumber=document.getElementById('inputNumber').value;
+    let inputNum=parseInt(inputNumber)
        
-       function facto(n){
-           if (n===0 || n===1){
-               return 1
-           }
-           return n*facto(n-1)
-       }
+    function facto(n){
+        if (n===0 || n===1){
+            return 1
+        }
+        return n*facto(n-1)
+    }
    
-       let result=facto(inputNum)
-       document.getElementById('factorial').textContent=result
-   }
+    let result=facto(inputNum)
+    document.getElementById('factorial').textContent=result
+}
+
+// RANDOM NUMBER
+
+let randomnumBtn=document.getElementById('randomnumBtn')
+let randomnumOutput=document.getElementById('randomnumOutput')
+  
+randomnumBtn.addEventListener('click', generateRandomNum)
+   
+function generateRandomNum(){
+    randomnumOutput.textContent=Math.floor(Math.random()*100)
+}
+
+// PRIME NUMBER
+
+let primeBtn=document.getElementById('primeBtn')
+let primeOutput=document.getElementById('primeOutput')
+
+primeBtn.addEventListener('click', function(){
+    let num=parseInt(document.getElementById('primeInput').value)
+    let isPrime=checkPrime(num);
+    primeOutput.textContent = isPrime ? 'It is a Prime Number':'Not a Prime Number'
+} );
+
+function checkPrime(num){
+    if (num<=1){
+        return false
+    }
+    for (let i=2; i<= Math.sqrt(num); i++){
+        if(num%i===0){
+            return false
+        }
+    }
+    return true
+}
+
+
+// ARMSTRONG NUMBER
+
+let armBtn=document.getElementById('armBtn');
+let armOutput=document.getElementById('armOutput');
+
+armBtn.addEventListener('click', isArm);
+
+function isArm(){
+    let armNumber=parseInt(document.getElementById('armNumber').value);
+    const numStr=armNumber.toString();
+    const numDigits=numStr.length
+    let sum=0;
+
+    for (let digit of numStr){
+        sum += Math.pow(parseInt(digit), numDigits)
+    }
+    return armOutput.textContent=(sum===armNumber)?'Armstrong Number':'Not an Armstrong Number'    
+}
+
+
+
+// ARRAY METHODS
    
    document.getElementById('generateBtn').addEventListener('click', generateArray);
    document.getElementById('minBtn').addEventListener('click', showMin);
@@ -122,14 +182,7 @@ function reverseString(){
    }
    
    
-   let randomnumBtn=document.getElementById('randomnumBtn')
-   let randomnumOutput=document.getElementById('randomnumOutput')
    
-   randomnumBtn.addEventListener('click', generateRandomNum)
-   
-   function generateRandomNum(){
-       randomnumOutput.textContent=Math.floor(Math.random()*100)
-   }
    
    // LOCAL STORAGE
    
@@ -224,21 +277,21 @@ function reverseString(){
    // HTTP METHODS
    
    // POST METHOD
-   
    let userForm1=document.getElementById('userForm1');
    let requestEl=document.getElementById('request');
    let responseEl=document.getElementById('response');
    let useridEl=document.getElementById('userid');
    
    userForm1.addEventListener('submit', function(event){
-       event.preventDefault();
+       event.preventDefault(); // Prevent default form submission behavior
    
-       let formData1=new FormData(userForm1);
-       let requestBody1={}
+       let formData1=new FormData(userForm1); // Create FormData object from form
+       let requestBody1={}     // Initialize empty object for request body
    
-       formData1.forEach(function(value, key){
+       // Convert FormData to JSON object
+    formData1.forEach(function(value, key){
            requestBody1[key]=value;
-       })
+    })
    
        let url="https://gorest.co.in/public-api/users";
    
@@ -402,50 +455,4 @@ function reverseString(){
    
    
    
-   
-   let userForm = document.getElementById("userForm");
-   let requestStatusEl = document.getElementById("requestStatus");
-   let httpResponseEl = document.getElementById("httpResponse");
-   
-   userForm.addEventListener("submit", function(event) {
-       event.preventDefault(); // Prevent default form submission behavior
-   
-       let formData = new FormData(userForm); // Create FormData object from form
-       let requestBody = {}; // Initialize empty object for request body
-   
-       // Convert FormData to JSON object
-       formData.forEach(function(value, key){
-           requestBody[key] = value;
-       });
-   
-       let options = {
-           method: "POST",
-           headers: {
-               "Content-Type": "application/json",
-               "Accept": "application/json",
-               "Authorization": "Bearer f081dcd4590a3a1d37c98d9bf2c903a2ff7aa54b20960a30e539d735bcdcb1b6"
-           },
-           body: JSON.stringify(requestBody)
-       };
-   
-       requestStatusEl.textContent = "Loading..."; // Display loading message
-   
-       fetch("https://gorest.co.in/public-api/users", options)
-           .then(response => {
-               if (!response.ok) {
-                   throw new Error('Network response was not ok');
-               }
-               return response.json();
-           })
-           .then(jsonData => {
-               let requestStatus = jsonData.code;
-               let httpResponse = JSON.stringify(jsonData);
-               requestStatusEl.textContent = requestStatus;
-               httpResponseEl.textContent = httpResponse;
-           })
-           .catch(error => {
-               console.error('Error:', error);
-               requestStatusEl.textContent = 'Error: ' + error.message;
-           });
-   });
    

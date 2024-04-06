@@ -14,7 +14,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand mr-4" href="#">My Website</a>
+        <a class="navbar-brand mr-4" href="#"><img src="https://res.cloudinary.com/dbelvmspz/image/upload/v1660558582/imran_logo_zh0c8u.jpg" alt="imran khan" height="30px" width="30px" class="mylogo" /> JSKHAN</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -76,7 +76,7 @@
     </div>
 </section>
 
-<section id="strings" class="string-container mt-5"> 
+<section id="strings" class="string-container "> 
     <div class="mt-5">
         <h1 class="heading1">String Operations</h1>
         <div class="cards">
@@ -143,22 +143,52 @@
                     <p id="factorial" class="output"></p>
                 </div>
             </div>
+
+            <div class="card card-2">
+                <div>
+                    <h1 class="heading2">Random Number</h1>
+                    <p class="description1">Math.floor(Math.random()*100)</p>
+                    <button id="randomnumBtn" class="button button1" >Random Number</button>
+                    <p id="randomnumOutput" class="output"></p>                    
+                </div>
+            </div>
+            <div class="card card-3">
+                <div>
+                    <h1 class="heading2">Prime Number</h1>
+                    <p class="description2">function checkPrime(num){
+                        if (num<=1){
+                            return false
+                        }<br>
+                        for (let i=2; i<= Math.sqrt(num); i++){
+                            if(num%i===0){
+                                return false
+                            }
+                        }
+                        return true
+                    }</p>
+                    <input type="text" id="primeInput" class="input" placeholder="Enter Number">
+                    <button id="primeBtn" class="button button1" >Is Prime</button>
+                    <p id="primeOutput" class="output"></p>                    
+                </div>
+            </div>
+            <div class="card card-4">
+                <div>
+                    <h1 class="heading2">Armstrong Number</h1>
+                    <p class="description1">for (let digit of numStr){<br>
+                        sum += Math.pow(parseInt(digit), numDigits)
+                    }<br> return sum===parseInt(numStr)</p>
+                    <input type="text" id="armNumber" class="input" placeholder="Enter Number">
+                    <button id="armBtn" class="button button1" >Armstrong</button>
+                    <p id="armOutput" class="output"></p>                    
+                </div>
+            </div>
         </div>
-
-
     </div>
 </section>
 
-            <div class="number-operations mt-5">
-                <h2 class="heading">Number Operations</h2>
-                <input type="text" id="inputNumber" placeholder="Enter Number">
-                <div class="result">
-                    <button class="button" onclick="factorial()">Factorial</button>
-                    <p id="factorial"></p>
-                </div>
-            </div>
-
-            <div class="array-container">
+<!-- ARRAYS -->            
+<section>
+<div id="arrays" class="array-container">
                 <h2 class="heading">Array Methods</h2>
                 <div class="box-container">
                     <button id="generateBtn" class="button">Generate Array</button>
@@ -193,19 +223,15 @@
                     <button id="reduceBtn" class="button">Reduce</button>
                     <p id="reduceOutput" class="output"></p>
                 </div>
-            </div>
+</div>
+</section>
 
-            <div class="math-container">
-                <div class="box-container">
-                    <button id="randomnumBtn" class="button" >Random Number</button>
-                    <p id="randomnumOutput" class="output"></p>
-                </div>
-            </div>
+            
 
 
 <!-- LOCAL STORAGE  -->
 
-<div class="storage-container">
+<div id="storage" class="storage-container">
     <h1 class="heading">Client-Side Data Storage</h1>
     <p class="description">Client-Side Data Storage is storing the data on the client (user's machine).
 Ex: Local Storage, Session Storage, Cookies,  IndexedDB and many more.</p>
@@ -234,7 +260,7 @@ Ex: Local Storage, Session Storage, Cookies,  IndexedDB and many more.</p>
 
 
             <!-- SCHEDULERS  -->
-            <div class="scheduler-container">
+<div id="scheduler" class="scheduler-container">
                 <h1 class="heading">Scheduler</h1>
                 <p class="description">The Schedulers are used to schedule the execution of a callback function.
                     Ex: setInterval( ), clearInterval( ), setTimeout( ), clearTimeout(), etc.
@@ -263,9 +289,9 @@ Ex: Local Storage, Session Storage, Cookies,  IndexedDB and many more.</p>
                     <p id="timeoutOutput" class="output"></p>
                 </div>
                 
-            </div>
+</div>
 
-            <div class="event-listener-container">
+<div id="el" class="event-listener-container">
                 <h1 class="heading">Event Listeners:</h1>
                 <p class="description">We can add an Event Listener to a DOM Object in three ways they are inline, on, add Event Listeners.</p>
                 <table class="table-container">
@@ -300,11 +326,11 @@ Ex: Local Storage, Session Storage, Cookies,  IndexedDB and many more.</p>
 
                 </table>
                 
-            </div>
+</div>
 
 <!-- HTTP METHODS PRACTICE -->
 <!--POST METHOD-->
-<div class="http-method-container">
+<div id="http" class="http-method-container">
     <h1 class="heading">HTTP Methods POST, GET, PUT, DELETE</h1>
     <div class="http-method-container1">
         <h1 class="heading">POST Method</h1>
@@ -392,52 +418,6 @@ Ex: Local Storage, Session Storage, Cookies,  IndexedDB and many more.</p>
  </div>
 
 
-
-<h1>Fetch Data with POST Method Example</h1>
-<div class="p-3 bg-container">
-    <h1 class="heading mb-4">Post method practice</h1>
-    <p class="request-url-text">REQUEST URL: <span class="request-url">https://gorest.co.in/public-api/users</span></p>
-    <!-- Create a form to collect user details -->
-    <form id="userForm" class="w-100">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender" required>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="status">Status:</label>
-            <select id="status" name="status" required>
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
-            </select>
-        </div>
-        <button type="submit" class="mt-3 p-2 button">Submit</button>
-    </form>
-    <hr />
-    <!-- Section to display the request status -->
-    <div class="p-2 mt-4">
-        <p>Request Status</p>
-        <p class="request-status" id="requestStatus"></p>
-        <!-- Loading indicator (initially hidden) -->
-        <p class="d-none" id="loading">Loading....</p>
-    </div>
-    <hr />
-    <!-- Section to display the response body -->
-    <div class="p-2 mt-4">
-        <p>Response Body</p>
-        <p class="http-response" id="httpResponse"></p>
-    </div>
-</div>
 
 
 
