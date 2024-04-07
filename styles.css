@@ -12,6 +12,51 @@ footer {
     width: 100%;
 }
 
+.home-container {
+    text-align: center;
+    padding: 50px;
+}
+.title {
+    font-size: 36px;
+    color: #eecc09;
+    margin-bottom: 20px;
+}
+.subtitle {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.feature {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.section-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.topic-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.topic-item {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    list-style-type:disc;
+}
+.bullet {
+    content: "\2022";  /* Add bullet symbol before each list item */
+    color: #008cba; /* Change bullet color */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
 #javascript{
     
 }
@@ -173,6 +218,15 @@ footer {
     border-radius: 5px;
     margin:10px;
     padding:10px;
+}
+
+.modernjs-container{
+    background-image: url("https://res.cloudinary.com/dbelvmspz/image/upload/v1677981107/istockphoto-1169276040-612x612_ekbabj.jpg");
+    background-size: cover;    
+    border: rgb(27, 244, 186) solid;
+    border-radius: 5px;
+    padding: 20px;
+    height: 100vh;
 }
 
 .table-container{

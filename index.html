@@ -47,11 +47,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#http">Http Methods</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#modernjs">ModernJS</a>
+                </li>
             </ul>
         </div>
 </nav>
 
-<div class="jskhan-container">
 
 
 
@@ -59,17 +61,22 @@
 
 <section id="#" class="home-container mt-5">
     <div>
-        <h1>Hai Welcome!</h1>
-        <p>Here i covered the javascript topics</p>
+        <h1 class="title">Welcome!</h1>
+        <p class="subtitle">Explore JavaScript topics below:</p>
         <div class="feature">
-            <h2>Topics Covered</h2>
-            <ul>
-                <li>String Operations</li>
-                <li>Number Operations</li>
-                <li>Arrays</li>
-                <li>Storage</li>
-                <li>Event Listeners</li>
-                <li>HTTP Methods</li>
+            
+            <h2 class="section-title">Topics Covered</h2>
+            
+            <ul class="topic-list cards card-1">
+                <li class="topic-item"><span class="bullet"></span>Strings</li>
+                <li class="topic-item"><span class="bullet"></span>Numbers</li>
+                <li class="topic-item"><span class="bullet"></span>Arrays</li>
+                <li class="topic-item"><span class="bullet"></span>Storage</li>
+                <li class="topic-item"><span class="bullet"></span>Scheduler</li>
+                <li class="topic-item"><span class="bullet"></span>Event Listeners</li>
+                <li class="topic-item"><span class="bullet"></span>HTTP Methods</li>
+                <li class="topic-item"><span class="bullet"></span>Modern JS Concepts</li>
+                
                 <!-- Add more topics as needed -->
             </ul>
         </div>
@@ -189,8 +196,8 @@
 <!-- ARRAYS -->            
 <section>
 <div id="arrays" class="array-container">
-                <h2 class="heading">Array Methods</h2>
-                <div class="box-container">
+    <h2 class="heading">Array Methods</h2>
+           <div class="box-container">
                     <button id="generateBtn" class="button">Generate Array</button>
                     <p id="arrayOutput"></p>
                 </div>
@@ -381,6 +388,12 @@ Ex: Local Storage, Session Storage, Cookies,  IndexedDB and many more.</p>
         </div>
     </div>
 
+    <div class="fetch-container mb-5">
+        <h1 class="heading">Fetch Operations</h1>
+        <p class=" description " id="jokeText">Click the Joke button to see Day of The Joke here</p>
+        <button class="button" id="jokeBtn">Joke</button>
+    </div>
+
 <!--PUT METHOD-->
 <div class="http-method-container1">
     <h1 class="heading">PUT Method</h1>
@@ -411,22 +424,31 @@ Ex: Local Storage, Session Storage, Cookies,  IndexedDB and many more.</p>
 </div>
 
             
-<div class="fetch-container mb-5">
-     <h1 class="heading">Fetch Operations</h1>
-     <p class=" description " id="jokeText">Click the Joke button to see Day of The Joke here</p>
-     <button class="button" id="jokeBtn">Joke</button>
- </div>
 
 
 
 
+<section id="modernjs" class="modernjs-container"> 
+    <div class="mt-5">
+        <h1 class="heading1">Modern JS Concepts</h1>
+        <div class="cards">
+            <div class="card card-1">
+                <div>
+                    <h1 class="heading2">Spread Operator</h1>
+                    <p class="description1">Unpack an iterable(array, object, etc.) into individual elements.</p>
+                    <input type="text" id="inputString" class="input" placeholder="Enter Text">
+                    <button class="button button1" onclick="reverseString()">Reverse</button>
+                    <p id="reversedString" class="output"></p>
+                </div>
+            </div>
+        </div>
 
+    </div>
+</section>
 
 <footer>
     <p>&copy; This Website Developed by Imran Khan. All rights reserved.</p>
 </footer>
-
-</div>
 
 <script src="script.js"></script>
 </body>
