@@ -1,8 +1,9 @@
+
 function reverseString(){
     let inputString=document.getElementById('inputString').value;
     let reversedString=inputString.split('').reverse().join('');
     document.getElementById('reversedString').textContent=reversedString;   
-   }
+}
    
    function isPalindrome(){
        let inputString=document.getElementById('inputString1').value;
@@ -455,4 +456,17 @@ function isArm(){
    
    
    
-   
+   // MODERN JS CONCEPTS
+
+   // SPREAD OEPRATOR
+   // Concatenate Arrays
+
+let concateBtn=document.getElementById('concateBtn');
+let concateArray=document.getElementById('concateArray');
+
+concateBtn.addEventListener('click', function(){
+    let inputArray=JSON.parse(document.getElementById('inputArray').value);
+    let result=[1,2,...inputArray,4];
+    concateArray.textContent='['+result+']';
+})
+
