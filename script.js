@@ -470,3 +470,59 @@ concateBtn.addEventListener('click', function(){
     concateArray.textContent='['+result+']';
 })
 
+let restBtn=document.getElementById('restBtn');
+let restOUtput=document.getElementById('restOutput');
+
+restBtn.addEventListener('click', function(){
+    let inputRestArray=JSON.parse(document.getElementById('inputRestArray').value);
+    let sum=0;
+    let [a,b, ...rest]=inputRestArray
+    for (let num of rest){
+        sum += parseInt(num);
+    }
+    restOUtput.textContent=sum;
+})
+
+
+let dayBtn=document.getElementById('dayBtn');
+let dayOutput=document.getElementById('dayOutput');
+
+dayBtn.addEventListener('click',function(){
+    let dayInput=document.getElementById('dayInput').value;
+    let [day, month, year]=dayInput.split('-');
+    let formattedDate=`${year}-${month}-${day}`;
+    const dayOfWeek=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+    let date=new Date(formattedDate);
+    let dayIndex=date.getDay();
+    dayOutput.textContent=dayOfWeek[dayIndex];
+})
+
+let ageBtn=document.getElementById('ageBtn');
+let ageOutput=document.getElementById('ageOutput');
+
+
+ageBtn.addEventListener('click', function(){
+    let ageInput=document.getElementById('ageInput').value;
+    const today=new Date();
+    const parts=ageInput.split('-');
+    const dob=new Date(parts[2], parts[1]-1, parts[0]);  // year, month(zero index start), day
+
+    let ageYears=today.getFullYear()-dob.getFullYear();
+    let ageMonths=today.getMonth()-dob.getMonth();
+    let ageDays=today.getDate()-dob.getDate();
+
+    // adjust ageMonths and ageDays if ageMonths is negative
+
+    if(ageMonths<0 || (ageMonths===0 && ageDays<0)){
+        ageYears--;
+        ageMonths +=12;
+    }
+
+    // adjust ageDays if its negative
+    if(ageDays<0){
+        const tempDate=new Date(today.getFullYear(), today.getMonth(), 0);
+        ageDays=tempDate.getDate()+ageDays;
+    }
+
+    ageOutput.textContent=`You are ${ageYears} years ,${ageMonths} months ,${ageDays} days old.`
+})
