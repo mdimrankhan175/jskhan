@@ -196,10 +196,14 @@
 <!-- ARRAYS -->            
 <section>
 <div id="arrays" class="array-container">
-    <h2 class="heading">Array Methods</h2>
+    <h2 class="heading1 mt-5">Array Methods</h2>
            <div class="box-container">
                     <button id="generateBtn" class="button">Generate Array</button>
-                    <p id="arrayOutput"></p>
+                    <p class="description4">numbersArray = [];
+                        for (let i = 0; i < 10; i++) {
+                            numbersArray.push(Math.floor(Math.random() * 100));
+                        }</p>
+                    <p id="arrayOutput" class="output"></p>
                 </div>
                 
                 <div class="box-container">
@@ -454,7 +458,10 @@ Ex: Local Storage, Session Storage, Cookies,  IndexedDB and many more.</p>
             </div>
             <div class="card card-3">
                 <div>
-                    <h1 class="heading2">Date Objects. Find Day of Week</h1>
+                    <h1 class="heading2">Find Day of Week</h1>
+                    <p class="description2">let date = new Date(formattedDate);<br>
+                        let dayIndex = date.getDay();<br>
+                        dayOfWeek[dayIndex];</p>
                     <input type="text" id="dayInput" class="input" placeholder="Enter DD-MM-YYYY">
                     <button class="button button1" id="dayBtn">Day</button>
                     <p id="dayOutput" class="output"></p>

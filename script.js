@@ -134,7 +134,7 @@ function isArm(){
    function generateArray() {
        numbersArray = [];
        for (let i = 0; i < 10; i++) {
-           numbersArray.push(Math.floor(Math.random() * 100) + 1);
+           numbersArray.push(Math.floor(Math.random() * 100));
        }
        document.getElementById('arrayOutput').innerText = 'Generated Array: ' +'[ '+ numbersArray.join(', ')+' ]';
        document.getElementById('statsOutput').innerText = '';
